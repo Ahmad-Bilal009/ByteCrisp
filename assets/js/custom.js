@@ -10,25 +10,16 @@ jQuery( document ).ready(function( $ ) {
         });
 
 
-        // Function to hide preloader
-        function hidePreloader() {
-            $("#preloader").fadeOut(600, function() {
-                $("#preloader").css("visibility", "hidden");
-            });
-        }
+        // Page loading animation
 
-        // Hide preloader when window is fully loaded
-        $(window).on('load', function() {
-            hidePreloader();
+        $("#preloader").animate({
+            'opacity': '0'
+        }, 600, function(){
+            setTimeout(function(){
+                $("#preloader").css("visibility", "hidden").fadeOut();
+            }, 300);
         });
-
-        // Fallback to hide preloader after 3 seconds
-        setTimeout(hidePreloader, 3000);
-
-        // Additional check to hide preloader if document is already loaded
-        if (document.readyState === 'complete') {
-            hidePreloader();
-        }
+        
 
         $(window).scroll(function() {
           var scroll = $(window).scrollTop();
