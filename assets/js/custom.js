@@ -11,14 +11,18 @@ jQuery( document ).ready(function( $ ) {
 
 
         // Page loading animation
-
-        $("#preloader").animate({
-            'opacity': '0'
-        }, 600, function(){
-            setTimeout(function(){
-                $("#preloader").css("visibility", "hidden").fadeOut();
-            }, 300);
+        $(window).on('load', function() {
+            $("#preloader").fadeOut(600, function() {
+                $("#preloader").css("visibility", "hidden");
+            });
         });
+
+        // Fallback in case load event doesn't fire
+        setTimeout(function() {
+            $("#preloader").fadeOut(600, function() {
+                $("#preloader").css("visibility", "hidden");
+            });
+        }, 2000);
         
 
         $(window).scroll(function() {
