@@ -40,9 +40,9 @@ const projects = [
   },
 ]
 
-function Work() {
+function Work({ id }) {
   return (
-    <section className="page-section work-page">
+    <section id={id} className="page-section work-page">
       <Reveal className="page-intro">
         <span className="eyebrow">Our work</span>
         <h1>Showcasing our recent projects and success stories</h1>
