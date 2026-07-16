@@ -5,11 +5,11 @@ import BrandMark from './BrandMark'
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
-  { to: '/team', label: 'Team' },
   { to: '/services', label: 'Services' },
   { to: '/work', label: 'Work' },
-  { to: '/pricing', label: 'Pricing' },
   { to: '/contact', label: 'Contact' },
+  { to: '/team', label: 'Team' },
+  { to: '/pricing', label: 'Pricing' },
 ]
 
 function Navbar() {
