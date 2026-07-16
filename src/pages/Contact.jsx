@@ -25,9 +25,9 @@ const contactItems = [
   },
 ]
 
-function Contact() {
+function Contact({ id }) {
   return (
-    <section className="page-section contact-page">
+    <section id={id} className="page-section contact-page">
       <Reveal className="page-intro">
         <span className="eyebrow">Contact us</span>
         <h1>Let&apos;s discuss your project</h1>

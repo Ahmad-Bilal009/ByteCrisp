@@ -62,12 +62,12 @@ const services = [
   },
 ]
 
-function Services() {
+function Services({ id }) {
   const [activeKey, setActiveKey] = useState(services[0].key)
   const active = services.find((service) => service.key === activeKey)
 
   return (
-    <section className="page-section services-page">
+    <section id={id} className="page-section services-page">
       <Reveal className="page-intro">
         <span className="eyebrow">Our services</span>
         <h1>Comprehensive software solutions for your business</h1>

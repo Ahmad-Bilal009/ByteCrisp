@@ -18,12 +18,12 @@ function App() {
       <main className="page-content" key={location.pathname}>
         <Routes location={location}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<Home />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/work" element={<Work />} />
+          <Route path="/services" element={<Home />} />
+          <Route path="/work" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Home />} />
         </Routes>
       </main>
       <Footer />

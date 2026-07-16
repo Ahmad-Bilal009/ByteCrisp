@@ -17,9 +17,9 @@ const stats = [
   { value: '15+', label: 'Years Experience' },
 ]
 
-function About() {
+function About({ id }) {
   return (
-    <section className="page-section about-page">
+    <section id={id} className="page-section about-page">
       <Reveal className="page-intro">
         <span className="eyebrow">About ByteCrisp</span>
         <h1>Innovative software solutions for modern businesses</h1>
