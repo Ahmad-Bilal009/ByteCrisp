@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import BrandMark from './BrandMark'
+import { PhoneIcon, MailIcon, PinIcon } from './Icons'
 
 function Footer() {
   return (
@@ -50,16 +51,34 @@ function Footer() {
 
         <div className="footer-col">
           <h4>Contact</h4>
-          <ul className="menu-list">
+          <ul className="menu-list menu-list-icons">
             <li>Mon&ndash;Fri, 09:00&ndash;18:00</li>
-            <li><a href="tel:+923091761176">+92 309 1761176</a></li>
-            <li><a href="mailto:info@bytecrisp.com">info@bytecrisp.com</a></li>
-            <li>Street No. 2, Main Nishatabad Road, Bhaiwala, Faisalabad</li>
+            <li>
+              <span className="menu-list-icon" aria-hidden="true"><PhoneIcon width="16" height="16" /></span>
+              <a href="tel:+923091761176">+92 309 1761176</a>
+            </li>
+            <li>
+              <span className="menu-list-icon" aria-hidden="true"><MailIcon width="16" height="16" /></span>
+              <a href="mailto:info@bytecrisp.com">info@bytecrisp.com</a>
+            </li>
+            <li>
+              <span className="menu-list-icon" aria-hidden="true"><PinIcon width="16" height="16" /></span>
+              <span>Street No. 2, Main Nishatabad Road, Bhaiwala, Faisalabad</span>
+            </li>
           </ul>
         </div>
       </div>
 
-      <p className="footer-copyright">ByteCrisp &copy; {new Date().getFullYear()} &middot; All rights reserved.</p>
+      <div className="footer-bottom">
+        <p className="footer-copyright">ByteCrisp &copy; {new Date().getFullYear()} &middot; All rights reserved.</p>
+        <button
+          type="button"
+          className="back-to-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          Back to top ↑
+        </button>
+      </div>
     </footer>
   )
 }

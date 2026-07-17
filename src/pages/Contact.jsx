@@ -62,7 +62,7 @@ function Contact({ id }) {
           title="ByteCrisp office location"
           src="https://maps.google.com/maps?q=Nishatabad+Road+Faisalabad+Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed"
           width="100%"
-          height="380"
+          height="460"
           style={{ border: 0 }}
           loading="lazy"
         />
