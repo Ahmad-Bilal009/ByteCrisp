@@ -14,15 +14,17 @@ const plansByCategory = {
   web: [
     {
       name: 'Basic',
-      price: '$1,999',
+      price: '$999',
       description: 'A polished website built on a proven, cost-effective stack.',
       features: [
-        'HTML5/CSS3 with responsive design',
-        'PHP + MySQL backend',
-        'Bootstrap UI, 1-year domain',
-        'Shared hosting & SSL certificate',
-        'Basic SEO & security',
-        '1 month of support',
+        [
+  'React.js frontend',
+  'Node.js + Express.js backend',
+  'MongoDB database',
+  'REST API & JWT authentication',
+  'Responsive UI & secure deployment',
+  '1 month of support',
+]
       ],
       highlight: false,
     },
@@ -116,7 +118,7 @@ const plansByCategory = {
     },
     {
       name: 'Professional',
-      price: '$9,999',
+      price: '$4,999',
       description: 'Cloud-hosted, multi-platform delivery with DevOps basics.',
       features: [
         'React/Vue frontend, Node.js/Django backend',
@@ -130,7 +132,7 @@ const plansByCategory = {
     },
     {
       name: 'Enterprise',
-      price: '$19,999',
+      price: '$11,999',
       description: 'End-to-end delivery across web, mobile, and infrastructure.',
       features: [
         'React/Vue/Angular, Spring Boot/Node.js',
@@ -147,7 +149,15 @@ const plansByCategory = {
 
 function Pricing() {
   const [category, setCategory] = useState('web')
+const currentIndex = categories.findIndex(item => item.key === category);
 
+const next = () => {
+  setCategory(categories[(currentIndex + 1) % categories.length].key);
+};
+
+const prev = () => {
+  setCategory(categories[(currentIndex - 1 + categories.length) % categories.length].key);
+};
   return (
     <section className="page-section pricing-page">
       <Reveal className="page-intro">
@@ -162,7 +172,10 @@ function Pricing() {
       <Reveal delay={80}>
         <CategoryTabs categories={categories} active={category} onChange={setCategory} />
       </Reveal>
-
+<div className="pricing-arrows">
+  <button onClick={prev}>←</button>
+  <button onClick={next}>→</button>
+</div>
       <div className="pricing-grid">
         {plansByCategory[category].map((plan, index) => (
           <PricingCard key={plan.name} plan={plan} delay={index * 90} />

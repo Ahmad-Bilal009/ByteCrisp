@@ -65,7 +65,15 @@ const services = [
 function Services({ id }) {
   const [activeKey, setActiveKey] = useState(services[0].key)
   const active = services.find((service) => service.key === activeKey)
+const currentIndex = services.findIndex(service => service.key === activeKey);
 
+const next = () => {
+  setActiveKey(services[(currentIndex + 1) % services.length].key);
+};
+
+const prev = () => {
+  setActiveKey(services[(currentIndex - 1 + services.length) % services.length].key);
+};
   return (
     <section id={id} className="page-section services-page">
       <Reveal className="page-intro">
@@ -87,6 +95,12 @@ function Services({ id }) {
             >
               <span className="services-tab-icon" aria-hidden="true">{service.icon}</span>
               {service.title}
+              <span>→</span>
+              <span className="services-tab-icon" aria-hidden="true">
+  {service.icon}
+</span>
+{service.title}
+<span>→</span>
             </button>
           ))}
         </div>
