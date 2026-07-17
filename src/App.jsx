@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -9,8 +10,16 @@ import Work from './pages/Work'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 
+const HOME_MERGED_PATHS = ['/', '/about', '/services', '/work', '/contact']
+
 function App() {
   const location = useLocation()
+
+  useEffect(() => {
+    if (!HOME_MERGED_PATHS.includes(location.pathname)) {
+      window.scrollTo(0, 0)
+    }
+  }, [location.pathname])
 
   return (
     <div className="app-shell">

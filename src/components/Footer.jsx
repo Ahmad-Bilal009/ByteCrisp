@@ -22,10 +22,7 @@ function Footer() {
             </li>
             <li>
               <a href="#" className="social-link" onClick={(e) => e.preventDefault()}>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                  <path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.2l-5.6-6.9L4 22H1l8.1-9.3L.9 2h7.4l5.1 6.3L18.9 2zm-1.3 18h2L6.5 4h-2l13.1 16z" />
-                </svg>
-                <span>X</span>
+                <span className="social-link-mark">X</span>
               </a>
             </li>
             <li>
