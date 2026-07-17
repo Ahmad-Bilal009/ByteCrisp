@@ -45,6 +45,22 @@ function Hero() {
     return () => clearInterval(timer)
   }, [])
 
+  const dots = (
+    <div className="hero-dots" role="tablist" aria-label="Hero slides">
+      {slides.map((slide, i) => (
+        <button
+          key={slide.ctaLabel}
+          type="button"
+          role="tab"
+          aria-selected={i === index}
+          aria-label={`Show slide ${i + 1}`}
+          className={`hero-dot ${i === index ? 'hero-dot-active' : ''}`}
+          onClick={() => setIndex(i)}
+        />
+      ))}
+    </div>
+  )
+
   return (
     <div className="hero">
       <div className="hero-glow" aria-hidden="true" />
@@ -52,25 +68,14 @@ function Hero() {
         <div key={slide.ctaLabel} className={`hero-slide ${i === index ? 'hero-slide-active' : ''}`}>
           <span className="eyebrow">{slide.eyebrow}</span>
           <h1>{slide.title}</h1>
-          <Link to={slide.ctaTo} className="cta-button primary">
-            {slide.ctaLabel}
-          </Link>
+          <div className="hero-cta-row">
+            <Link to={slide.ctaTo} className="cta-button primary">
+              {slide.ctaLabel}
+            </Link>
+            {dots}
+          </div>
         </div>
       ))}
-
-      <div className="hero-dots" role="tablist" aria-label="Hero slides">
-        {slides.map((slide, i) => (
-          <button
-            key={slide.ctaLabel}
-            type="button"
-            role="tab"
-            aria-selected={i === index}
-            aria-label={`Show slide ${i + 1}`}
-            className={`hero-dot ${i === index ? 'hero-dot-active' : ''}`}
-            onClick={() => setIndex(i)}
-          />
-        ))}
-      </div>
     </div>
   )
 }
