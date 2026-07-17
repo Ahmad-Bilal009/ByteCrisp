@@ -1721,3 +1721,28 @@ p {
   font-size: 18px;
   font-weight: bold;
 }
+.services-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.services-tab-title {
+  flex: 1;
+  text-align: left;
+}
+
+.services-tab-arrow {
+  margin-left: auto;
+  font-size: 18px;
+}
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px; /* ya 550px */
+}
+.pricing-card .cta-button {
+  margin-top: auto;
+}

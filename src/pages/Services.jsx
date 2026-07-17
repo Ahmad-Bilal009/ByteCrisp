@@ -93,14 +93,16 @@ const prev = () => {
               className={service.key === activeKey ? 'services-tab active' : 'services-tab'}
               onClick={() => setActiveKey(service.key)}
             >
-              <span className="services-tab-icon" aria-hidden="true">{service.icon}</span>
-              {service.title}
-              <span>→</span>
-              <span className="services-tab-icon" aria-hidden="true">
+            
+         <span className="services-tab-icon" aria-hidden="true">
   {service.icon}
 </span>
-{service.title}
-<span>→</span>
+
+<span className="services-tab-title">
+  {service.title}
+</span>
+
+<span className="services-tab-arrow">→</span>
             </button>
           ))}
         </div>
