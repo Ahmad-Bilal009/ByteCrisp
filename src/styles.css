@@ -1687,3 +1687,37 @@ p {
     animation: none;
   }
 }
+.services-arrows{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin:20px 0;
+}
+.pricing-arrows {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pricing-arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.services-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services-tab-icon {
+  margin-right: 10px;
+}
+
+.services-tab span:last-child {
+  font-size: 18px;
+  font-weight: bold;
+}
