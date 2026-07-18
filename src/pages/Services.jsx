@@ -83,28 +83,39 @@ const prev = () => {
       </Reveal>
 
       <Reveal as="div" className="services-tabs-panel" delay={60}>
-        <div className="services-tab-list" role="tablist" aria-label="Service categories">
-          {services.map((service) => (
-            <button
-              key={service.key}
-              type="button"
-              role="tab"
-              aria-selected={service.key === activeKey}
-              className={service.key === activeKey ? 'services-tab active' : 'services-tab'}
-              onClick={() => setActiveKey(service.key)}
-            >
-            
-         <span className="services-tab-icon" aria-hidden="true">
-  {service.icon}
-</span>
+        <div className="services-tab-nav-row">
+          <button type="button" className="services-nav-arrow" aria-label="Previous service" onClick={prev}>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
 
-<span className="services-tab-title">
-  {service.title}
-</span>
+          <div className="services-tab-list" role="tablist" aria-label="Service categories">
+            {services.map((service) => (
+              <button
+                key={service.key}
+                type="button"
+                role="tab"
+                aria-selected={service.key === activeKey}
+                className={service.key === activeKey ? 'services-tab active' : 'services-tab'}
+                onClick={() => setActiveKey(service.key)}
+              >
+                <span className="services-tab-icon" aria-hidden="true">
+                  {service.icon}
+                </span>
 
-<span className="services-tab-arrow">→</span>
-            </button>
-          ))}
+                <span className="services-tab-title">
+                  {service.title}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          <button type="button" className="services-nav-arrow" aria-label="Next service" onClick={next}>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
 
         <article className="services-tab-content">
