@@ -72,7 +72,7 @@ const plansByCategory = {
     },
     {
       name: 'Professional',
-      price: '$39,999',
+      price: '$3,999',
       description: 'Cross-platform apps with custom design and offline support.',
       features: [
         'React Native or Flutter, two platforms',
@@ -86,7 +86,7 @@ const plansByCategory = {
     },
     {
       name: 'Enterprise',
-      price: '$79,999',
+      price: '$7,999',
       description: 'Native and cross-platform coverage with custom integrations.',
       features: [
         'Native + cross-platform, all platforms',
