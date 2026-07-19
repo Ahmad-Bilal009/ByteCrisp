@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import { CodeIcon, DevicesIcon, CloudIcon, PaletteIcon } from '../components/Icons'
@@ -65,15 +65,26 @@ const services = [
 function Services({ id }) {
   const [activeKey, setActiveKey] = useState(services[0].key)
   const active = services.find((service) => service.key === activeKey)
-const currentIndex = services.findIndex(service => service.key === activeKey);
+  const currentIndex = services.findIndex((service) => service.key === activeKey)
+  const tabListRef = useRef(null)
 
-const next = () => {
-  setActiveKey(services[(currentIndex + 1) % services.length].key);
-};
+  const next = () => {
+    setActiveKey(services[(currentIndex + 1) % services.length].key)
+  }
 
-const prev = () => {
-  setActiveKey(services[(currentIndex - 1 + services.length) % services.length].key);
-};
+  const prev = () => {
+    setActiveKey(services[(currentIndex - 1 + services.length) % services.length].key)
+  }
+
+  useEffect(() => {
+    const list = tabListRef.current
+    const activeTab = list?.querySelector('.services-tab.active')
+    if (!list || !activeTab) return
+
+    const targetLeft = activeTab.offsetLeft - (list.clientWidth - activeTab.clientWidth) / 2
+    list.scrollTo({ left: targetLeft, behavior: 'smooth' })
+  }, [activeKey])
+
   return (
     <section id={id} className="page-section services-page">
       <Reveal className="page-intro">
@@ -90,7 +101,7 @@ const prev = () => {
             </svg>
           </button>
 
-          <div className="services-tab-list" role="tablist" aria-label="Service categories">
+          <div className="services-tab-list" ref={tabListRef} role="tablist" aria-label="Service categories">
             {services.map((service) => (
               <button
                 key={service.key}
