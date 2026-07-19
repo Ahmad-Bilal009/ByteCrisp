@@ -17,14 +17,12 @@ const plansByCategory = {
       price: '$999',
       description: 'A polished website built on a proven, cost-effective stack.',
       features: [
-        [
-  'React.js frontend',
-  'Node.js + Express.js backend',
-  'MongoDB database',
-  'REST API & JWT authentication',
-  'Responsive UI & secure deployment',
-  '1 month of support',
-]
+        'React.js frontend',
+        'Node.js + Express.js backend',
+        'MongoDB database',
+        'REST API & JWT authentication',
+        'Responsive UI & secure deployment',
+        '1 month of support',
       ],
       highlight: false,
     },
@@ -60,7 +58,7 @@ const plansByCategory = {
   app: [
     {
       name: 'Basic',
-      price: '$2,999',
+      price: '$1,999',
       description: 'A single-platform native app, ready for launch.',
       features: [
         'Native iOS or Android (Swift/Kotlin)',
@@ -74,7 +72,7 @@ const plansByCategory = {
     },
     {
       name: 'Professional',
-      price: '$6,999',
+      price: '$39,999',
       description: 'Cross-platform apps with custom design and offline support.',
       features: [
         'React Native or Flutter, two platforms',
@@ -88,7 +86,7 @@ const plansByCategory = {
     },
     {
       name: 'Enterprise',
-      price: '$12,999',
+      price: '$79,999',
       description: 'Native and cross-platform coverage with custom integrations.',
       features: [
         'Native + cross-platform, all platforms',
@@ -107,15 +105,12 @@ const plansByCategory = {
       price: '$4,999',
       description: 'A complete web + mobile foundation on one modern stack.',
       features: [
-        [
-    'React.js frontend',
-    'Node.js + Express.js backend',
-    'MongoDB database',
-    'REST API & JWT authentication',
-    'Responsive UI & secure deployment',
-    '1 month of support',
-  
-],
+        'React.js frontend',
+        'Node.js + Express.js backend',
+        'MongoDB database',
+        'REST API & JWT authentication',
+        'Responsive UI & secure deployment',
+        '1 month of support',
       ],
       highlight: false,
     },
