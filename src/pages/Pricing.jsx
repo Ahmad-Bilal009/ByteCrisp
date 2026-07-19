@@ -107,12 +107,15 @@ const plansByCategory = {
       price: '$4,999',
       description: 'A complete web + mobile foundation on one modern stack.',
       features: [
-        'React frontend, Node.js/Express backend',
-        'MySQL/PostgreSQL database',
-        'VPS hosting, domain & SSL',
-        'Single-platform mobile app',
-        'Basic backend, database & API',
-        '3 months of support',
+        [
+    'React.js frontend',
+    'Node.js + Express.js backend',
+    'MongoDB database',
+    'REST API & JWT authentication',
+    'Responsive UI & secure deployment',
+    '1 month of support',
+  
+],
       ],
       highlight: false,
     },
