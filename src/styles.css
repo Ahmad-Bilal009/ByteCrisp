@@ -233,6 +233,24 @@ a {
   max-width: 760px;
 }
 
+.my-life-kit-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+}
+
+.my-life-kit-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.my-life-kit-privacy p {
+  margin: 0;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -1309,6 +1327,19 @@ p {
 
 .portfolio-thumb span {
   position: relative;
+}
+
+.portfolio-thumb-logo {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.portfolio-cta {
+  margin-top: 1rem;
+  padding: 0.65rem 1.3rem;
+  font-size: 0.85rem;
 }
 
 .portfolio-thumb-blue {

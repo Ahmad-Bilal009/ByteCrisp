@@ -15,6 +15,15 @@ const projects = [
     tone: 'cyan',
   },
   {
+    title: 'My Life Kit',
+    description: 'An all-in-one utility app bringing together money tools, calculators, converters, time tools, QR & barcode, documents, and security in one place.',
+    tags: ['Mobile', 'Utility App'],
+    tone: 'cyan',
+    logo: '/my-life-kit-logo.svg',
+    link: '/my-life-kit',
+    linkLabel: 'Download',
+  },
+  {
     title: 'Healthcare Portal',
     description: 'A secure patient management and appointment booking system for a healthcare provider, with integrated video consultations.',
     tags: ['Full Stack', 'Vue.js', 'Django'],
