@@ -50,9 +50,25 @@ function MyLifeKit() {
 
       <Reveal as="div" className="story-panel my-life-kit-privacy" delay={140}>
         <p>Learn how My Life Kit handles your data.</p>
-        <Link to="/my-life-kit/privacy-policy" className="cta-button">
-          Privacy Policy
-        </Link>
+        <Link
+  to="/my-life-kit/privacy-policy"
+  className="privacy-policy-card"
+>
+  <div className="privacy-policy-card-icon">
+    🔒
+  </div>
+
+  <div className="privacy-policy-card-content">
+    <h3>Privacy Policy</h3>
+    <p>
+      Learn how My Life Kit protects your data and privacy.
+    </p>
+  </div>
+
+  <div className="privacy-policy-card-arrow">
+    →
+  </div>
+</Link>
       </Reveal>
     </section>
   )

@@ -18,10 +18,9 @@ const projects = [
     title: 'My Life Kit',
     description: 'An all-in-one utility app bringing together money tools, calculators, converters, time tools, QR & barcode, documents, and security in one place.',
     tags: ['Mobile', 'Utility App'],
-    tone: 'cyan',
+    tone: 'app',
     logo: '/my-life-kit-logo.svg',
     link: '/my-life-kit',
-    linkLabel: 'Download',
   },
   {
     title: 'Healthcare Portal',
