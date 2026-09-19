@@ -23,12 +23,6 @@ const projects = [
     link: '/my-life-kit',
   },
   {
-    title: 'Healthcare Portal',
-    description: 'A secure patient management and appointment booking system for a healthcare provider, with integrated video consultations.',
-    tags: ['Full Stack', 'Vue.js', 'Django'],
-    tone: 'violet',
-  },
-  {
     title: 'SaaS Analytics Platform',
     description: 'A scalable SaaS platform for business analytics, supporting multi-tenant architecture and advanced reporting.',
     tags: ['Web', 'Angular', 'Spring Boot'],
