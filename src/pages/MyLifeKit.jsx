@@ -15,7 +15,7 @@ function MyLifeKit() {
   return (
     <section className="page-section my-life-kit-page">
       <Reveal className="page-intro my-life-kit-intro">
-        <img src="/my-life-kit-logo.svg" alt="My Life Kit logo" className="my-life-kit-logo" />
+        <img src="/my-life-kit-logo.jpg" alt="My Life Kit logo" className="my-life-kit-logo" />
         <span className="eyebrow">My Life Kit</span>
         <h1>Your everyday toolkit, all in one app</h1>
         <p>

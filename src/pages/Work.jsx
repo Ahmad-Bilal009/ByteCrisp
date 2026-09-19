@@ -19,7 +19,7 @@ const projects = [
     description: 'An all-in-one utility app bringing together money tools, calculators, converters, time tools, QR & barcode, documents, and security in one place.',
     tags: ['Mobile', 'Utility App'],
     tone: 'app',
-    logo: '/my-life-kit-logo.svg',
+    logo: '/my-life-kit-logo.jpg',
     link: '/my-life-kit',
   },
   {
