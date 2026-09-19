@@ -1,46 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="mlk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7ed957"/>
-      <stop offset="100%" stop-color="#1f8a3d"/>
+    <linearGradient id="mlk-bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f9d3f"/>
+      <stop offset="100%" stop-color="#8fe06a"/>
     </linearGradient>
   </defs>
 
-  <path d="M156 32h200c68 0 124 56 124 124v144c0 68-56 124-124 124H231l-64 58c-10 9-26 2-26-12v-46h-1c-68 0-124-56-124-124V156C16 88 72 32 140 32z"
-        fill="url(#mlk-bg)"/>
-  <path d="M156 32h200c68 0 124 56 124 124v144c0 68-56 124-124 124H231l-64 58c-10 9-26 2-26-12v-46h-1c-68 0-124-56-124-124V156C16 88 72 32 140 32z"
-        fill="none" stroke="#ffffff" stroke-width="10" opacity="0.9"/>
+  <rect x="0" y="0" width="512" height="512" rx="72" fill="url(#mlk-bg)"/>
 
-  <g fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M120 130h50"/>
-    <path d="M120 154h50"/>
-    <path d="M145 130v66l30-24"/>
+  <text x="70" y="190" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="120" fill="#ffffff">$</text>
+
+  <g transform="translate(250,70) rotate(28)">
+    <polygon points="0,60 40,0 150,0 110,60" fill="#ffffff"/>
+    <polygon points="8,52 40,8 40,22 22,52" fill="#1f9d3f" opacity="0.28"/>
   </g>
 
-  <g transform="translate(190,120) rotate(28)">
-    <rect x="0" y="0" width="150" height="72" rx="10" fill="none" stroke="#ffffff" stroke-width="9"/>
-    <path d="M0 24h150" stroke="#ffffff" stroke-width="9"/>
+  <g transform="translate(300,168) rotate(24)">
+    <rect x="0" y="0" width="118" height="150" rx="16" fill="none" stroke="#ffffff" stroke-width="14"/>
+    <rect x="14" y="16" width="90" height="30" rx="6" fill="#ffffff"/>
+    <circle cx="30" cy="80" r="9" fill="#ffffff"/>
+    <circle cx="59" cy="80" r="9" fill="#ffffff"/>
+    <circle cx="88" cy="80" r="9" fill="#ffffff"/>
+    <circle cx="30" cy="109" r="9" fill="#ffffff"/>
+    <circle cx="59" cy="109" r="9" fill="#ffffff"/>
+    <circle cx="88" cy="109" r="9" fill="#ffffff"/>
+    <circle cx="30" cy="134" r="9" fill="#ffffff"/>
+    <circle cx="59" cy="134" r="9" fill="#ffffff"/>
+    <circle cx="88" cy="134" r="9" fill="#ffffff"/>
   </g>
 
-  <g transform="translate(230,180)">
-    <rect x="0" y="0" width="140" height="150" rx="14" fill="none" stroke="#ffffff" stroke-width="9"/>
-    <rect x="18" y="18" width="104" height="30" rx="4" fill="none" stroke="#ffffff" stroke-width="8"/>
-    <circle cx="30" cy="78" r="7" fill="#ffffff"/>
-    <circle cx="70" cy="78" r="7" fill="#ffffff"/>
-    <circle cx="110" cy="78" r="7" fill="#ffffff"/>
-    <circle cx="30" cy="108" r="7" fill="#ffffff"/>
-    <circle cx="70" cy="108" r="7" fill="#ffffff"/>
-    <circle cx="110" cy="108" r="7" fill="#ffffff"/>
-    <circle cx="30" cy="132" r="7" fill="#ffffff"/>
-    <circle cx="70" cy="132" r="7" fill="#ffffff"/>
-    <circle cx="110" cy="132" r="7" fill="#ffffff"/>
-  </g>
-
-  <g transform="translate(110,268)">
-    <path d="M0 0h150 v96 l-12 -10 -13 10 -13 -10 -13 10 -13 -10 -13 10 -13 -10 -13 10 -13 -10 -13 10 z" fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round"/>
-    <path d="M75 0v96" stroke="#ffffff" stroke-width="5" stroke-dasharray="7 8"/>
-    <path d="M18 26h38" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
-    <path d="M18 46h38" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
-    <path d="M18 66h24" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <g transform="translate(96,296)">
+    <path d="M0 0 h320 l-13 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -14 16 -14 -16 -13 16 V148 l13 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 14 -16 14 16 13 -16 Z"
+          fill="#ffffff"/>
+    <path d="M160 8v132" stroke="#1f9d3f" stroke-width="10" stroke-dasharray="4 12" stroke-linecap="round"/>
+    <path d="M28 40h60" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
+    <path d="M28 68h60" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
+    <path d="M28 96h40" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
+    <path d="M232 40h60" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
+    <path d="M232 68h60" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
+    <path d="M232 96h40" stroke="#1f9d3f" stroke-width="11" stroke-linecap="round"/>
   </g>
 </svg>

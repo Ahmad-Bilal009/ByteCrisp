@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
 
 function PortfolioCard({ project, delay }) {
+  const Tag = project.link ? Link : 'article'
+  const tagProps = project.link ? { to: project.link } : {}
+
   return (
-    <Reveal as="article" delay={delay} className="portfolio-card">
+    <Reveal as={Tag} delay={delay} className="portfolio-card" {...tagProps}>
       <div className={`portfolio-thumb portfolio-thumb-${project.tone}`} aria-hidden="true">
         {project.logo ? (
           <img src={project.logo} alt="" className="portfolio-thumb-logo" />
@@ -19,11 +22,6 @@ function PortfolioCard({ project, delay }) {
             <span className="portfolio-tag" key={tag}>{tag}</span>
           ))}
         </div>
-        {project.link && (
-          <Link to={project.link} className="cta-button primary portfolio-cta">
-            {project.linkLabel || 'View Project'}
-          </Link>
-        )}
       </div>
     </Reveal>
   )

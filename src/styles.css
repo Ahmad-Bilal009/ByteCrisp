@@ -234,9 +234,10 @@ a {
 }
 
 .my-life-kit-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
+  width: 128px;
+  height: 128px;
+  border-radius: 28px;
+  filter: drop-shadow(0 16px 32px rgba(31, 157, 63, 0.35));
 }
 
 .my-life-kit-privacy {
@@ -1039,6 +1040,17 @@ p {
   border: 1px solid var(--border-soft);
 }
 
+.story-panel h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.story-panel p + p,
+.story-panel .values-list {
+  margin-top: 0.85rem;
+}
+
 .values-list {
   list-style: none;
   margin: 0;
@@ -1291,10 +1303,13 @@ p {
 }
 
 .portfolio-card {
+  display: block;
   border-radius: 24px;
   background: var(--bg-elevated);
   border: 1px solid var(--border-soft);
   overflow: hidden;
+  color: inherit;
+  text-decoration: none;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1331,15 +1346,9 @@ p {
 
 .portfolio-thumb-logo {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-}
-
-.portfolio-cta {
-  margin-top: 1rem;
-  padding: 0.65rem 1.3rem;
-  font-size: 0.85rem;
 }
 
 .portfolio-thumb-blue {
@@ -1352,6 +1361,10 @@ p {
 
 .portfolio-thumb-violet {
   background: linear-gradient(135deg, #4b2e9e, #7b5cf0);
+}
+
+.portfolio-thumb-app {
+  background: linear-gradient(45deg, #1f9d3f, #8fe06a);
 }
 
 .portfolio-body {
@@ -1812,4 +1825,166 @@ p {
 }
 .pricing-card .cta-button {
   margin-top: auto;
+}
+.privacy-policy-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.privacy-policy-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.privacy-policy-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.privacy-policy-content {
+  flex: 1;
+}
+
+.privacy-policy-content h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.privacy-policy-content p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.privacy-policy-arrow {
+  font-size: 24px;
+  opacity: 0.7;
+}
+.privacy-policy-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: inherit;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  cursor: pointer;
+}
+
+.privacy-policy-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.privacy-policy-card-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.09);
+
+  font-size: 23px;
+}
+
+.privacy-policy-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.privacy-policy-card-content h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.privacy-policy-card-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+.privacy-policy-card-arrow {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+
+.privacy-policy-card:hover .privacy-policy-card-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .privacy-policy-card {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 17px;
+  }
+
+  .privacy-policy-card-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 13px;
+  }
+
+  .privacy-policy-card-content h3 {
+    font-size: 16px;
+  }
+
+  .privacy-policy-card-content p {
+    font-size: 12px;
+  }
+
+  .privacy-policy-card-arrow {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
 }
